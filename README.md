@@ -42,3 +42,10 @@ $ ./vendor/bin/phpunit
 ## License
 
 The MIT License (MIT). Please see [License File](https://github.com/ARTACK/delivery-status-notification/blob/master/LICENSE) for more information.
+
+## Resources
+- [RFC 3464](https://tools.ietf.org/html/rfc3464)
+- [RFC 1894](https://tools.ietf.org/html/rfc1894)
+- [RFC 822](https://tools.ietf.org/html/rfc822)
+- [IANA DSN Types](https://www.iana.org/assignments/dsn-types/dsn-types.xhtml)
+- [IANA SMTP Enhanced Status Code](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml)
