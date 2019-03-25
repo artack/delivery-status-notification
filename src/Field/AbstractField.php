@@ -20,7 +20,7 @@ class AbstractField implements FieldInterface
         return $this->name;
     }
 
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }

@@ -14,6 +14,7 @@
         "php": "^7.2"
     },
     "require-dev": {
+        "zbateson/mail-mime-parser": "^1.1.4",
         "phpunit/phpunit": "^8.0",
         "symfony/var-dumper": "^4.2"
     },
