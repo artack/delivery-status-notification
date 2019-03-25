@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Artack\Dsn\Field;
 
+use Artack\Dsn\Exception\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class StatusFieldTest extends TestCase
@@ -40,7 +41,7 @@ class StatusFieldTest extends TestCase
      */
     public function testWithInvalidInput(int $codeClass, int $codeSubject, int $codeEnumerated): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
 
         new StatusField('name', $codeClass, $codeSubject, $codeEnumerated, null);
     }

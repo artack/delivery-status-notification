@@ -4,12 +4,17 @@ declare(strict_types=1);
 
 namespace Artack\Dsn;
 
+use Artack\Dsn\Exception\DsnException;
 use PHPUnit\Framework\TestCase;
 
 class DeliveryStatusNotificationTest extends TestCase
 {
-    public function testNoop(): void
+    public function testDeliveryStatusNotification(): void
     {
-        $this->assertTrue(true);
+        $this->expectException(DsnException::class);
+        $this->expectExceptionMessage('Could not parse delivery status');
+        $this->expectExceptionCode(0);
+
+        DeliveryStatusNotification::from('nonsense content');
     }
 }

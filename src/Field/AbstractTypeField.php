@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Artack\Dsn\Field;
 
+use Artack\Dsn\Exception\InvalidArgumentException;
+
 abstract class AbstractTypeField extends AbstractField
 {
     private $type;
@@ -35,7 +37,7 @@ abstract class AbstractTypeField extends AbstractField
     public function setType(?string $type): void
     {
         if (!\in_array($type, $this->getTypes(), true)) {
-            throw new \InvalidArgumentException(sprintf('given type "%s" is not one of "%s"', $type, implode(', ', $this->getTypes())));
+            throw new InvalidArgumentException(sprintf('given type "%s" is not one of "%s"', $type, implode(', ', $this->getTypes())));
         }
 
         $this->type = $type;

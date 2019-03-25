@@ -1,0 +1,21 @@
+Reporting-MTA: dns; cs.utk.edu
+
+Original-Recipient: rfc822;arathib@vnet.ibm.com
+Final-Recipient: rfc822;arathib@vnet.ibm.com
+Action: failed
+Status: 5.0.0 (permanent failure)
+Diagnostic-Code: smtp;  550 'arathib@vnet.IBM.COM' is not a
+registered gateway user
+Remote-MTA: dns; vnet.ibm.com
+
+Original-Recipient: rfc822;johnh@hpnjld.njd.hp.com
+Final-Recipient: rfc822;johnh@hpnjld.njd.hp.com
+Action: delayed
+Status: 4.0.0 (hpnjld.njd.jp.com: host name lookup failure)
+
+Original-Recipient: rfc822;wsnell@sdcc13.ucsd.edu
+Final-Recipient: rfc822;wsnell@sdcc13.ucsd.edu
+Action: failed
+Status: 5.0.0
+Diagnostic-Code: smtp; 550 user unknown
+Remote-MTA: dns; sdcc13.ucsd.edu

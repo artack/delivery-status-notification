@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Artack\Dsn\Field;
 
+use Artack\Dsn\Exception\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class AddressTypeFieldTest extends TestCase
@@ -37,7 +38,7 @@ class AddressTypeFieldTest extends TestCase
      */
     public function testInvalidType(string $type): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
 
         new AddressTypeField('name', 'value', $type, null);
     }

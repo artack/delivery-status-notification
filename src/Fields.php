@@ -8,18 +8,43 @@ use Artack\Dsn\Field\FieldInterface;
 
 class Fields
 {
-    private $headers = [];
+    private $fields = [];
 
-    public function __construct(FieldInterface ...$headers)
+    public function __construct(FieldInterface ...$fields)
     {
-        foreach ($headers as $header) {
-            $this->add($header);
+        foreach ($fields as $field) {
+            $this->add($field);
         }
     }
 
-    public function add(FieldInterface $header): void
+    public function add(FieldInterface $field): void
     {
-        $name = strtolower($header->getName());
-        $this->headers[$name][] = $header;
+        $name = strtolower($field->getName());
+        $this->fields[$name] = $field;
+    }
+
+    public function get(string $name): ?FieldInterface
+    {
+        $name = strtolower($name);
+        if (!isset($this->fields[$name])) {
+            return null;
+        }
+
+        return $this->fields[$name];
+    }
+
+    public function getAll(): iterable
+    {
+        yield from $this->fields;
+    }
+
+    public function getNames(): array
+    {
+        return array_keys($this->fields);
+    }
+
+    public function remove(string $name): void
+    {
+        unset($this->fields[strtolower($name)]);
     }
 }

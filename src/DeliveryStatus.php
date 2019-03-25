@@ -31,4 +31,9 @@ class DeliveryStatus
     {
         $this->recipientFields[] = $recipientFields;
     }
+
+    public function countRecipientFields(): int
+    {
+        return \count($this->recipientFields);
+    }
 }

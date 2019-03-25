@@ -1,0 +1,12 @@
+Reporting-MTA: dns; googlemail.com
+Received-From-MTA: dns; anyone@gmail.com
+Arrival-Date: Sun, 24 Mar 2019 12:52:25 -0700 (PDT)
+X-Original-Message-ID: <84784C9D-765B-4BA8-B6CA-31FC419C2EA8@gmail.com>
+
+Final-Recipient: rfc822; non-existent-recipient@bluewin.ch
+Action: failed
+Status: 5.1.1
+Remote-MTA: dns; mxbw.lb.bluewin.ch. (195.186.227.50, the server for the
+ domain bluewin.ch.)
+Diagnostic-Code: smtp; 550 5.1.1 <non-existent-recipient@bluewin.ch> recipient rejected, address unknown
+Last-Attempt-Date: Sun, 24 Mar 2019 12:52:26 -0700 (PDT)

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Artack\Dsn\Field;
 
+use Artack\Dsn\Exception\InvalidArgumentException;
+
 class ActionField extends AbstractField
 {
     private const ACTIONS = [
@@ -30,7 +32,7 @@ class ActionField extends AbstractField
     public function setAction(string $action): void
     {
         if (!\in_array($action, self::ACTIONS, true)) {
-            throw new \InvalidArgumentException(sprintf('given action "%s" is not one of "%s"', $action, implode(', ', self::ACTIONS)));
+            throw new InvalidArgumentException(sprintf('given action "%s" is not one of "%s"', $action, implode(', ', self::ACTIONS)));
         }
 
         $this->action = $action;

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Artack\Dsn\Field;
 
+use Artack\Dsn\Exception\InvalidArgumentException;
+
 class StatusField extends AbstractField
 {
     private const CODE_CLASSES = [2, 4, 5];
@@ -34,7 +36,7 @@ class StatusField extends AbstractField
     public function setCodeClass(?int $codeClass): void
     {
         if (!\in_array($codeClass, self::CODE_CLASSES, true)) {
-            throw new \InvalidArgumentException(sprintf('given code class "%s" is not one of "%s"', $codeClass, implode(', ', self::CODE_CLASSES)));
+            throw new InvalidArgumentException(sprintf('given code class "%s" is not one of "%s"', $codeClass, implode(', ', self::CODE_CLASSES)));
         }
 
         $this->codeClass = $codeClass;
@@ -48,7 +50,7 @@ class StatusField extends AbstractField
     public function setCodeSubject(int $codeSubject): void
     {
         if ($codeSubject < 0 || $codeSubject > 7) {
-            throw new \InvalidArgumentException(sprintf('given code class "%d" is not in the range between 0 and 7', $codeSubject));
+            throw new InvalidArgumentException(sprintf('given code class "%d" is not in the range between 0 and 7', $codeSubject));
         }
 
         $this->codeSubject = $codeSubject;
@@ -62,7 +64,7 @@ class StatusField extends AbstractField
     public function setCodeEnumerated(int $codeEnumerated): void
     {
         if ($codeEnumerated < 0 || $codeEnumerated > 999) {
-            throw new \InvalidArgumentException(sprintf('given code enumerated "%d" is not in the range between 0 and 999', $codeEnumerated));
+            throw new InvalidArgumentException(sprintf('given code enumerated "%d" is not in the range between 0 and 999', $codeEnumerated));
         }
 
         $this->codeEnumerated = $codeEnumerated;
