@@ -45,7 +45,7 @@ class StatusFieldTest extends TestCase
         new StatusField('name', $codeClass, $codeSubject, $codeEnumerated, null);
     }
 
-    public function invalidInputProvider()
+    public function invalidInputProvider(): array
     {
         return [
             [-1, 0, 0],
