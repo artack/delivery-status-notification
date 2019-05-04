@@ -1,6 +1,6 @@
 # Parser for Delivery Status Notifications (RFC 3464 &amp; RFC 1894)
 
-![Packagist](https://img.shields.io/packagist/v/ARTACK/delivery-status-notification.svg?style=flat-square)
+[![Packagist](https://img.shields.io/packagist/v/ARTACK/delivery-status-notification.svg?style=flat-square)](https://packagist.org/packages/artack/delivery-status-notification)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Build Status](https://img.shields.io/travis/ARTACK/delivery-status-notification/master.svg?style=flat-square)](https://travis-ci.org/ARTACK/delivery-status-notification)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/ARTACK/delivery-status-notification.svg?style=flat-square)](https://scrutinizer-ci.com/g/ARTACK/delivery-status-notification/code-structure)
